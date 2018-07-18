@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_9.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_10.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_11.png">
-<meta property="og:updated_time" content="2018-07-18T12:43:22.475Z">
+<meta property="og:updated_time" content="2018-07-18T12:49:31.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云服务器搭建以及Linux安装软件小结">
 <meta name="twitter:description" content="购买   首先，在阿里云官网购买云服务器ESC (https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa) 。这个网址是学生优惠，非常划算！">
@@ -292,11 +292,11 @@
 <ol>
 <li>配置环境变量</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">   </span><br><span class="line"><span class="meta">#</span><span class="bash"> 在文件的最后面添加如下代码</span></span><br><span class="line">export JAVA_HOME=/usr/local/java/jdk1.7.0_72</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">   </span><br><span class="line"><span class="meta">#</span> 在文件的最后面添加如下代码</span><br><span class="line">export JAVA_HOME=/usr/local/java/jdk1.7.0_72</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
 <ol>
 <li>保存退出</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在vim下，按<span class="built_in">shift</span> + : 调出底部命令，输入wq (保存退出)，回车ok</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 在vim下，按shift + : 调出底部命令，输入wq (保存退出)，回车ok</span><br></pre></td></tr></table></figure>
 <ol>
 <li>重新加载配置文件</li>
 </ol>
@@ -587,6 +587,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
