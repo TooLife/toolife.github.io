@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_9.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_10.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_11.png">
-<meta property="og:updated_time" content="2018-07-19T08:59:24.352Z">
+<meta property="og:updated_time" content="2018-07-19T09:04:53.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云服务器搭建以及Linux安装软件小结">
 <meta name="twitter:description" content="购买   首先，在阿里云官网购买云服务器ESC (https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa) 。这个网址是学生优惠，非常划算！">
@@ -205,7 +205,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1,577字</span>
+        <span class="post-count">1,576字</span>
       </span>
     </span>
 
@@ -314,36 +314,14 @@
 <blockquote>
 <p><strong>jdk安装完成！</strong></p>
 </blockquote>
-<h6 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h6><p>1.先准备好apache-tomcat安装包 (apache-tomcat-7.0.52.tar.gz)<br>2.在 /usr/local 新建一个文件夹tomcat</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/tomcat</span><br></pre></td></tr></table></figure>
-<p>3.移动 apache-tomcat…tar.gz 到 /usr/local/tomcat</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-tomcat-7.0.52.tar.gz /usr/local/tomcat/</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>进入/usr/local/tomcat目录,解压Tomcat</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat</span><br><span class="line">tar -zxvf apache-tomcat-7.0.52.tar.gz</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>进入 /usr/local/tomcat/apache-tomcat-7.0.52/bin</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat/apache-tomcat-7.0.52/bin</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>启动tomcat(执行startup.sh文件)</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式1:</span><br><span class="line">    sh startup.sh</span><br><span class="line">方式2:</span><br><span class="line">    ./startup.sh</span><br></pre></td></tr></table></figure>
-<ol start="7">
-<li>修改防火墙的规则，放行8080端口，同时在阿里云安全组规则中添加8080端口</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8080/tcp --permanent</span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li>查看服务器已开启的tcp端口</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@jason] # netstat -ntlp</span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      739/httpd</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2101/sshd</span><br><span class="line">tcp        0      0 127.0.0.1:8005          0.0.0.0:*               LISTEN      3833/java</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li><p>访问8080端口</p>
-</li>
-<li><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://x.x.x.x:8080</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<h6 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h6><p>1.先准备好apache-tomcat安装包 (apache-tomcat-7.0.52.tar.gz)<br>2.在 /usr/local 新建一个文件夹tomcat<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/tomcat</span><br></pre></td></tr></table></figure></p>
+<p>3.移动 apache-tomcat…tar.gz 到 /usr/local/tomcat<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-tomcat-7.0.52.tar.gz /usr/local/tomcat/</span><br></pre></td></tr></table></figure></p>
+<p>4.进入/usr/local/tomcat目录,解压Tomcat<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat</span><br><span class="line">tar -zxvf apache-tomcat-7.0.52.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>5.进入 /usr/local/tomcat/apache-tomcat-7.0.52/bin<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat/apache-tomcat-7.0.52/bin</span><br></pre></td></tr></table></figure></p>
+<p>6.启动tomcat(执行startup.sh文件)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式1:</span><br><span class="line">    sh startup.sh</span><br><span class="line">方式2:</span><br><span class="line">    ./startup.sh</span><br></pre></td></tr></table></figure></p>
+<p>7.修改防火墙的规则，放行8080端口，同时在阿里云安全组规则中添加8080端口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8080/tcp --permanent</span><br></pre></td></tr></table></figure></p>
+<p>8.查看服务器已开启的tcp端口<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@jason] # netstat -ntlp</span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      739/httpd</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2101/sshd</span><br><span class="line">tcp        0      0 127.0.0.1:8005          0.0.0.0:*               LISTEN      3833/java</span><br></pre></td></tr></table></figure></p>
+<p>9.访问8080端口<br> <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://x.x.x.x:8080</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="https://toolife.github.io/images/ali_cloud/path_11.png" alt="path_11"></p>
 
       
@@ -653,6 +631,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
@@ -666,18 +656,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
               </li>
             
             <div class="clearfix"></div>
