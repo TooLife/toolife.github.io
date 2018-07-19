@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_9.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_10.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_11.png">
-<meta property="og:updated_time" content="2018-07-19T00:29:55.949Z">
+<meta property="og:updated_time" content="2018-07-19T08:45:26.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云服务器搭建以及Linux安装软件小结">
 <meta name="twitter:description" content="购买   首先，在阿里云官网购买云服务器ESC (https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa) 。这个网址是学生优惠，非常划算！">
@@ -227,9 +227,35 @@
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+      </p>
+      <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number"></span> <span class="toc-text">阿里云服务器防火墙与端口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">1.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">1.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
+      </div>
+      <script type="text/javascript">
+        function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+        };
+        function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+        };
+      </script>
+           
+    <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        
         <h5 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h5><blockquote>
 <p>  <strong>首先，在阿里云官网购买云服务器ESC</strong> (<a href="https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa" target="_blank" rel="noopener">https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa</a>) 。这个网址是学生优惠，非常划算！</p>
 </blockquote>
@@ -526,6 +552,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number"></span> <span class="toc-text">阿里云服务器防火墙与端口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">1.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">1.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -675,6 +714,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
@@ -688,18 +739,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
               </li>
             
             <div class="clearfix"></div>

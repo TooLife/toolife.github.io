@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="是什么是定时任务调度？   基于给定的时间点、给定的时间间隔或者给定的执行次数自动执行任务。     Timer 由JDK自带提供！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-19T08:27:00.229Z">
+<meta property="og:updated_time" content="2018-07-19T08:45:22.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="定时任务调度工具之Timer">
 <meta name="twitter:description" content="是什么是定时任务调度？   基于给定的时间点、给定的时间间隔或者给定的执行次数自动执行任务。     Timer 由JDK自带提供！">
@@ -216,14 +216,35 @@
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+      </p>
+      <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#是什么是定时任务调度？"><span class="toc-number">1.</span> <span class="toc-text">是什么是定时任务调度？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timer的定义"><span class="toc-number">2.</span> <span class="toc-text">Timer的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Timer定时调度任务的四种用法"><span class="toc-number">2.1.</span> <span class="toc-text">Timer定时调度任务的四种用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scheduleAtFixedRate的两种用法"><span class="toc-number">2.2.</span> <span class="toc-text">scheduleAtFixedRate的两种用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TimerTask其他函数介绍"><span class="toc-number">2.3.</span> <span class="toc-text">TimerTask其他函数介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Timer其他函数介绍"><span class="toc-number">2.4.</span> <span class="toc-text">Timer其他函数介绍</span></a></li></ol></li></ol>
+      </div>
+      <script type="text/javascript">
+        function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+        };
+        function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+        };
+      </script>
+           
+    <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        
-          <div id="toc" class="toc-article">
-            <strong class="toc-title">文章目录</strong>
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#是什么是定时任务调度？"><span class="toc-number">1.</span> <span class="toc-text">是什么是定时任务调度？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timer的定义"><span class="toc-number">2.</span> <span class="toc-text">Timer的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Timer定时调度任务的四种用法"><span class="toc-number">2.1.</span> <span class="toc-text">Timer定时调度任务的四种用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scheduleAtFixedRate的两种用法"><span class="toc-number">2.2.</span> <span class="toc-text">scheduleAtFixedRate的两种用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TimerTask其他函数介绍"><span class="toc-number">2.3.</span> <span class="toc-text">TimerTask其他函数介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Timer其他函数介绍"><span class="toc-number">2.4.</span> <span class="toc-text">Timer其他函数介绍</span></a></li></ol></li></ol>
-          </div>
-        
         <h3 id="是什么是定时任务调度？"><a href="#是什么是定时任务调度？" class="headerlink" title="是什么是定时任务调度？"></a>是什么是定时任务调度？</h3><blockquote>
 <p>  基于给定的时间点、给定的时间间隔或者给定的执行次数自动执行任务。</p>
 </blockquote>
@@ -590,6 +611,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
@@ -603,18 +636,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Timer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
               </li>
             
             <div class="clearfix"></div>
