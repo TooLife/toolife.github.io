@@ -804,6 +804,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
    <script type="text/javascript">
         var gitalk = new Gitalk({
           clientID: '2336b445a092cd7171ee',
@@ -811,7 +812,8 @@
           repo: 'toolife.github.io',
           owner: 'TooLife',
           admin: ['TooLife'],
-          id: location.pathname,
+          // id: location.pathname,
+          id: '<%= page.date %>',
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           
