@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_9.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_10.png">
 <meta property="og:image" content="https://toolife.github.io/images/ali_cloud/path_11.png">
-<meta property="og:updated_time" content="2018-07-19T08:45:26.329Z">
+<meta property="og:updated_time" content="2018-07-19T08:54:13.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云服务器搭建以及Linux安装软件小结">
 <meta name="twitter:description" content="购买   首先，在阿里云官网购买云服务器ESC (https://promotion.aliyun.com/ntms/campus2017.html?spm=5176.8142029.631162.75.68606d3e9rbcEa) 。这个网址是学生优惠，非常划算！">
@@ -236,7 +236,7 @@
       <div id="toc-article" class="toc-article">
         <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
         <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number"></span> <span class="toc-text">阿里云服务器防火墙与端口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">1.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">1.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number">5.</span> <span class="toc-text">阿里云服务器防火墙与端口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">6.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">6.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">6.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
       </div>
       <script type="text/javascript">
         function showToc(){
@@ -280,7 +280,7 @@
 <p>  优点：让你的命令行具有提示功能，还能记录你输入过得命令。缺点就是有些命令识别不了，需要退出fish模式下再执行😆</p>
 </blockquote>
 <p><img src="https://toolife.github.io/images/ali_cloud/path_7.png" alt="path_7"></p>
-<h4 id="阿里云服务器防火墙与端口"><a href="#阿里云服务器防火墙与端口" class="headerlink" title="阿里云服务器防火墙与端口"></a>阿里云服务器防火墙与端口</h4><blockquote>
+<h5 id="阿里云服务器防火墙与端口"><a href="#阿里云服务器防火墙与端口" class="headerlink" title="阿里云服务器防火墙与端口"></a>阿里云服务器防火墙与端口</h5><blockquote>
 <p>  阿里云服务器信息</p>
 <p>  Linux Center OS 7.3 x86_64</p>
 <p>  <strong>前言，Center OS 7.0 以后默认使用的是firewall作为防火墙，而Center OS 7.0以前，使用 iptables 作为防火墙，所以我们在开启、关闭、刷新服务以及打开端口都变了，使用systemctl命令。systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体</strong></p>
@@ -289,27 +289,27 @@
 <li>firewalld的基本使用，</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">启动: systemctl start firewalld</span><br><span class="line">关闭: systemctl stop firewalld</span><br><span class="line">查看状态: systemctl status firewalld </span><br><span class="line">开机禁用: systemctl disable firewalld</span><br><span class="line">开机启用: systemctl enable firewalld</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>配置firewalld-cmd</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">查看版本: firewall-cmd --version</span><br><span class="line">查看帮助: firewall-cmd --help</span><br><span class="line">显示状态: firewall-cmd --state</span><br><span class="line">查看所有打开的端口: firewall-cmd --zone=public --list-ports</span><br><span class="line">更新防火墙规则: firewall-cmd --reload</span><br><span class="line">查看区域信息: firewall-cmd --get-active-zones</span><br><span class="line">查看指定接口所属区域: firewall-cmd --get-zone-of-interface=eth0</span><br><span class="line">拒绝所有包:firewall-cmd --panic-on</span><br><span class="line">取消拒绝状态: firewall-cmd --panic-off</span><br><span class="line">查看是否拒绝: firewall-cmd --query-panic</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>systemctl命令介绍</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">启动一个服务：systemctl start firewalld.service</span><br><span class="line">关闭一个服务：systemctl stop firewalld.service</span><br><span class="line">重启一个服务：systemctl restart firewalld.service</span><br><span class="line">显示一个服务的状态：systemctl status firewalld.service</span><br><span class="line">在开机时启用一个服务：systemctl enable firewalld.service</span><br><span class="line">在开机时禁用一个服务：systemctl disable firewalld.service</span><br><span class="line">查看服务是否开机启动：systemctl is-enabled firewalld.service</span><br><span class="line">查看已启动的服务列表：systemctl list-unit-files|grep enabled</span><br><span class="line">查看启动失败的服务列表：systemctl --failed</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>开启、查看、关闭端口</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">开放<span class="number">80</span>端口：firewall-cmd --zone=public --add-port=<span class="number">80</span>/tcp --permanent</span><br><span class="line">查看<span class="number">80</span>端口是否开放：firewall-cmd --zone= public --query-port=<span class="number">80</span>/tcp</span><br><span class="line">关闭<span class="number">80</span>端口：firewall-cmd --zone= public --remove-port=<span class="number">80</span>/tcp --permanent</span><br><span class="line">重新载入：firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="5">
 <li>既然端口已经打开了，然而还是访问不了！！！</li>
 </ol>
 <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://x.x.x.x:80</span></span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="6">
 <li>在阿里云本实例安全组中，添加安全组规则</li>
 </ol>
 <p><img src="https://toolife.github.io/images/ali_cloud/path_9.png" alt="path_9"></p>
-<ol>
+<ol start="7">
 <li>再次访问还是访问不了，原因是：缺少Apache服务，接下来安装</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安装：yum install httpd httpd-devel</span><br><span class="line">设置开机自启：chkconfig --levels <span class="number">235</span> httpd on</span><br><span class="line">开启Apache服务：systemctl start httpd</span><br><span class="line"></span><br><span class="line">再次访问 http://x.x.x.x:<span class="number">80</span>，ok了</span><br></pre></td></tr></table></figure>
@@ -322,39 +322,39 @@
 <li>检查系统上是否安装了jdk(若安装了就需要先卸载再使用我们自己的)</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>查看出安装的java的软件包</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>卸载jdk</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --nodeps java-1.6.0-openjdk-1.6.0.0-1.66.1.13.0.el6.i686</span><br><span class="line">rpm -e --nodeps java-1.7.0-openjdk-1.7.0.45-2.4.3.3.el6.i686 tzdata-java-2013g-1.el6.noarch</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="5">
 <li>在 /usr/local 新建一个文件夹 java,存放jdk</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/java</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="6">
 <li>移动 jdk-8u171-linux-i586.tar 到 /usr/local/java下</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-8u171-linux-i586.tar /usr/local/java</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="7">
 <li>进入 /usr/local/java 目录,解压jdk到当前目录</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/java</span><br><span class="line">tar -xvf jdk-8u171-linux-i586.tar</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="8">
 <li>配置环境变量</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">   </span><br><span class="line"><span class="meta">#</span> 在文件的最后面添加如下代码</span><br><span class="line">export JAVA_HOME=/usr/local/java/jdk1.7.0_72</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="9">
 <li>保存退出</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 在vim下，按shift + : 调出底部命令，输入wq (保存退出)，回车ok</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="10">
 <li>重新加载配置文件</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="11">
 <li>查看jdk是否安装成功</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">[root@jason ~]# -bash: /usr/java/jdk1.7.0_71/bin/java: /lib/ld-linux.so.2: bad ELF interpreter: No such file or directory</span><br></pre></td></tr></table></figure>
@@ -362,7 +362,7 @@
 <p>  <strong>问题来了，出现了错误：No such file or directory。</strong></p>
 <p>  <strong>原因：没有那个文件或目录，需要安装glibc</strong></p>
 </blockquote>
-<ol>
+<ol start="12">
 <li>终端输入下面的命令，安装好glibc，问题解决,，再次查看jdk版本</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install glibc.i686</span><br></pre></td></tr></table></figure>
@@ -375,31 +375,31 @@
 <li>在 /usr/local 新建一个文件夹tomcat</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/tomcat</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>移动 apache-tomcat…tar.gz 到 /usr/local/tomcat</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-tomcat-7.0.52.tar.gz /usr/local/tomcat/</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>进入/usr/local/tomcat目录,解压Tomcat</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat</span><br><span class="line">tar -zxvf apache-tomcat-7.0.52.tar.gz</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="5">
 <li>进入 /usr/local/tomcat/apache-tomcat-7.0.52/bin</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/tomcat/apache-tomcat-7.0.52/bin</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="6">
 <li>启动tomcat(执行startup.sh文件)</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式1:</span><br><span class="line">    sh startup.sh</span><br><span class="line">方式2:</span><br><span class="line">    ./startup.sh</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="7">
 <li>修改防火墙的规则，放行8080端口，同时在阿里云安全组规则中添加8080端口</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8888/tcp --permanent</span><br></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8080/tcp --permanent</span><br></pre></td></tr></table></figure>
+<ol start="8">
 <li>查看服务器已开启的tcp端口</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@jason] # netstat -ntlp</span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      3833/java</span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      739/httpd</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2101/sshd</span><br><span class="line">tcp        0      0 127.0.0.1:8005          0.0.0.0:*               LISTEN      3833/java</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="9">
 <li><p>访问8080端口</p>
 </li>
 <li><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://x.x.x.x:8080</span></span><br></pre></td></tr></table></figure>
@@ -559,7 +559,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number"></span> <span class="toc-text">阿里云服务器防火墙与端口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">1.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">1.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#购买"><span class="toc-number">1.</span> <span class="toc-text">购买</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置密码"><span class="toc-number">2.</span> <span class="toc-text">配置密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#连接"><span class="toc-number">3.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推荐一个好用的插件：fish"><span class="toc-number">4.</span> <span class="toc-text">推荐一个好用的插件：fish</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#阿里云服务器防火墙与端口"><span class="toc-number">5.</span> <span class="toc-text">阿里云服务器防火墙与端口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装JDK、Tomcat"><span class="toc-number">6.</span> <span class="toc-text">安装JDK、Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装JDK"><span class="toc-number">6.1.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#安装Tomcat"><span class="toc-number">6.2.</span> <span class="toc-text">安装Tomcat</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
