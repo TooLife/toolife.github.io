@@ -91,9 +91,18 @@
 <meta property="og:url" content="http://yoursite.com/2018/07/19/Use-the-terminal-to-create-Maven-projects/index.html">
 <meta property="og:site_name" content="个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T01:23:49.004Z">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/mav-version.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/1.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/2.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/3.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/3-1.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/3-2.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/3-3.png">
+<meta property="og:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/4.png">
+<meta property="og:updated_time" content="2018-07-20T02:08:44.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use the terminal to create Maven projects">
+<meta name="twitter:image" content="http://yoursite.com/Users/honeyrr/Desktop/Demo/image/mav-version.png">
 
 
 
@@ -344,7 +353,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  199
                 </span>
               
 
@@ -383,6 +392,43 @@
       
         <hr>
 <a id="more"></a>
+<h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><ul>
+<li>mvn –v (mvn -version)</li>
+</ul>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/mav-version.png" alt="mav-version"></p>
+<h4 id="maven创建java项目"><a href="#maven创建java项目" class="headerlink" title="maven创建java项目"></a>maven创建java项目</h4><ul>
+<li>mvn archetype:generate -DgroupId=com.java_demo -DartifactId=java_demo</li>
+</ul>
+<h4 id="maven创建web项目"><a href="#maven创建web项目" class="headerlink" title="maven创建web项目"></a>maven创建web项目</h4><ul>
+<li>mvn archetype:generate -DgroupId=com.web_demo -DartifactId=web_demo -DarchetypeArtifactId=maven-archetype-webapp<ul>
+<li>archetype：原型插件</li>
+<li>DgroupId：一般填写公司域名后缀倒过来</li>
+<li>DartifactId：项目名</li>
+<li>DarchetypeArtifactId：web项目的模板</li>
+</ul>
+</li>
+<li>mvn archetype:create -DgroupId=com.web_demo -DartifactId=web_demo -DarchetypeArtifatId=maven-archetype-webapp<ul>
+<li><strong><em>注意事项</em></strong>：3.5版本以上丢弃掉create方式创建maven项目，使用generate。所以上面一种是3.5以上的创建方式，这种是3.5以下的。</li>
+</ul>
+</li>
+</ul>
+<h4 id="项目创建好之后，将项目导入到IntelliJ-IDEA中"><a href="#项目创建好之后，将项目导入到IntelliJ-IDEA中" class="headerlink" title="项目创建好之后，将项目导入到IntelliJ IDEA中"></a>项目创建好之后，将项目导入到IntelliJ IDEA中</h4><ul>
+<li>第一步：将创建项目命令复制到终端</li>
+</ul>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/1.png" alt="1"></p>
+<ul>
+<li>第二步：执行第一步之后，中间若出现需要填什么直接回车，最后会出现BUILD SUCCESS则创建成功了</li>
+</ul>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/2.png" alt="2"></p>
+<ul>
+<li>第三步：Import Project</li>
+</ul>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/3.png" alt="3"></p>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/3-1.png" alt="3-1"></p>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/3-2.png" alt="3-2"></p>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/3-3.png" alt="3-3"></p>
+<p><img src="/Users/honeyrr/Desktop/Demo/image/4.png" alt="4"></p>
+
       
     </div>
     
@@ -468,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -533,6 +588,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看版本"><span class="nav-number">1.</span> <span class="nav-text">查看版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maven创建java项目"><span class="nav-number">2.</span> <span class="nav-text">maven创建java项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maven创建web项目"><span class="nav-number">3.</span> <span class="nav-text">maven创建web项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#项目创建好之后，将项目导入到IntelliJ-IDEA中"><span class="nav-number">4.</span> <span class="nav-text">项目创建好之后，将项目导入到IntelliJ IDEA中</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
