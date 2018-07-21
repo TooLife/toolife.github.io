@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="原创,Java,mysql," />
 
 
 
@@ -86,12 +86,11 @@
 
 
 
-<meta name="description" content="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作   前言，本篇博客适合初学的java开发者阅读，了解一些底层的原理和思想。实际在工作中这些东西并不会再接触(除C3P0)，但是万变不离其宗！底层原理原理和思想非常重要！  ###所需jar包  要在Java项目中连接数据库，必须需要mysql驱动包.  C3P0.  DBUtils.   ###原生五步法  要使用Ja">
+<meta name="keywords" content="原创,Java,mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客">
+<meta property="og:title" content="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作">
 <meta property="og:url" content="http://yoursite.com/2018/07/21/细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作   前言，本篇博客适合初学的java开发者阅读，了解一些底层的原理和思想。实际在工作中这些东西并不会再接触(除C3P0)，但是万变不离其宗！底层原理原理和思想非常重要！  ###所需jar包  要在Java项目中连接数据库，必须需要mysql驱动包.  C3P0.  DBUtils.   ###原生五步法  要使用Ja">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/mysql_cb/jar_1.png">
 <meta property="og:image" content="http://yoursite.com/images/mysql_cb/jar_2.png">
@@ -99,10 +98,9 @@
 <meta property="og:image" content="http://yoursite.com/images/mysql_cb/path_1.png">
 <meta property="og:image" content="http://yoursite.com/images/mysql_cb/path_2.png">
 <meta property="og:image" content="http://yoursite.com/images/mysql_cb/path_3.png">
-<meta property="og:updated_time" content="2018-07-21T01:00:57.010Z">
+<meta property="og:updated_time" content="2018-07-21T01:11:37.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
-<meta name="twitter:description" content="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作   前言，本篇博客适合初学的java开发者阅读，了解一些底层的原理和思想。实际在工作中这些东西并不会再接触(除C3P0)，但是万变不离其宗！底层原理原理和思想非常重要！  ###所需jar包  要在Java项目中连接数据库，必须需要mysql驱动包.  C3P0.  DBUtils.   ###原生五步法  要使用Ja">
+<meta name="twitter:title" content="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作">
 <meta name="twitter:image" content="http://yoursite.com/images/mysql_cb/jar_1.png">
 
 
@@ -139,7 +137,7 @@
 
 
 
-  <title> | 个人博客</title>
+  <title>细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作 | 个人博客</title>
   
 
 
@@ -310,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作</h1>
         
 
         <div class="post-meta">
@@ -322,7 +320,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-21T08:48:21+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-21T08:48:33+08:00">
                 2018-07-21
               </time>
             
@@ -332,6 +330,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -359,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,715
+                  2,710
                 </span>
               
 
@@ -396,11 +416,12 @@
       
 
       
-        <h2 id="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作"><a href="#细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作" class="headerlink" title="细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作"></a>细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作</h2><blockquote>
-<p>  前言，本篇博客适合初学的java开发者阅读，了解一些底层的原理和思想。实际在工作中这些东西并不会再接触(除C3P0)，但是万变不离其宗！底层原理原理和思想非常重要！</p>
+        <hr>
+<a id="more"></a>
+<blockquote>
+<p>  前言，本篇博客适合初学的java开发者阅读，了解一些底层的原理和思想。实际在工作中这些东西并不会再接触(除C3P0)，但是万变不离其宗！底层原理原理和思想非常重要！如有不对请详细指出，相互学习，感谢。</p>
 </blockquote>
-<p>###所需jar包</p>
-<ol>
+<h3 id="所需jar包"><a href="#所需jar包" class="headerlink" title="所需jar包"></a>所需jar包</h3><ol>
 <li><p>要在Java项目中连接数据库，必须需要mysql驱动包.<br><img src="/images/mysql_cb/jar_1.png" alt="mysql驱动包"></p>
 </li>
 <li><p>C3P0.<br><img src="/images/mysql_cb/jar_2.png" alt="C3P0"></p>
@@ -408,13 +429,11 @@
 <li><p>DBUtils.<br><img src="/images/mysql_cb/jar_3.png" alt="DBUtils"></p>
 </li>
 </ol>
-<p>###原生五步法</p>
-<blockquote>
+<h3 id="原生五步法"><a href="#原生五步法" class="headerlink" title="原生五步法"></a>原生五步法</h3><blockquote>
 <p>要使用Java代码连接数据库，并操作数据库，就要导入msyql包，原生操作数据库分为以下五步：</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.注册驱动</span></span><br><span class="line">DriverManager.registerDriver(<span class="keyword">new</span> Driver());</span><br><span class="line"><span class="comment">// TODO 数据库路径</span></span><br><span class="line">String url = <span class="string">"jdbc:mysql://localhost:3306/shopmall"</span>;</span><br><span class="line"><span class="comment">// TODO 用户名与密码</span></span><br><span class="line">String user = <span class="string">"root"</span>;</span><br><span class="line">String password =<span class="string">"123"</span>;</span><br><span class="line"><span class="comment">// 2.获取连接</span></span><br><span class="line">Connection connection = (Connection) DriverManager.getConnection(url, user, password);</span><br><span class="line"><span class="comment">// 3.创建执行SQL语句的对象</span></span><br><span class="line">Statement statement = connection.createStatement();</span><br><span class="line">String sql = <span class="string">"select * from orders"</span>;</span><br><span class="line"><span class="comment">// 4.处理执行SQL语句的结果</span></span><br><span class="line">ResultSet result = statement.executeQuery(sql);</span><br><span class="line"><span class="keyword">while</span> (result.next()) &#123;</span><br><span class="line">    System.out.println(result.getObject(<span class="string">"ordertime"</span>) + <span class="string">"-"</span> + result.getObject(<span class="string">"address"</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 5.关闭资源</span></span><br><span class="line"><span class="keyword">if</span> (result != <span class="keyword">null</span>) &#123;</span><br><span class="line">    result.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (statement != <span class="keyword">null</span>) &#123;</span><br><span class="line">    statement.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (connection != <span class="keyword">null</span>) &#123;</span><br><span class="line">    connection.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>####分析</p>
-<blockquote>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><blockquote>
 <p><strong>第一步：</strong>     </p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.注册驱动</span></span><br><span class="line">DriverManager.registerDriver(<span class="keyword">new</span> Driver());</span><br></pre></td></tr></table></figure>
@@ -477,6 +496,16 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原创/" rel="tag"><i class="fa fa-tag"></i> 原创</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
+          
+        </div>
       
 
       
@@ -598,7 +627,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -609,7 +638,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -642,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作"><span class="nav-number">1.</span> <span class="nav-text">细谈浅析Mysql在Java项目中使用C3P0包和DBUtils对数据库的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C3P0"><span class="nav-number">1.1.</span> <span class="nav-text">C3P0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DBUtils"><span class="nav-number">1.2.</span> <span class="nav-text">DBUtils</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#所需jar包"><span class="nav-number">1.</span> <span class="nav-text">所需jar包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原生五步法"><span class="nav-number">2.</span> <span class="nav-text">原生五步法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">2.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C3P0"><span class="nav-number">3.</span> <span class="nav-text">C3P0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DBUtils"><span class="nav-number">4.</span> <span class="nav-text">DBUtils</span></a></li></ol></div>
             
 
           </div>
