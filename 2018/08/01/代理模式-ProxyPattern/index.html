@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/08/01/代理模式-ProxyPattern/index.html">
 <meta property="og:site_name" content="个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T07:40:15.615Z">
+<meta property="og:updated_time" content="2018-08-01T08:00:33.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代理模式-ProxyPattern">
 
@@ -411,37 +411,53 @@
       
         <hr>
 <a id="more"></a>
-<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><pre><code>代理模式与装饰者模式:
-    相同点:
-        1. 前提条件：装饰者(代理者)与被装饰者(委托者)要继承相同的父类或实现相同的接口。
-        2. 都可以增强某个类的方法，对程序进行扩展。
-    不同点:
-        1. 代理者是为某个对象添加一个代理，以控制对这个对象的访问。而装饰者增强某个类的方法。
-        2. 代理可以在调用核心方法之前做前置处理，在调用核心方法之后做后置处理。
-</code></pre><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><pre><code>定义：
- 1. 为对象提供一种代理，加以控制对象的访问。
- 2. 在某些特定的情况下一个对象不适合或者不能直接引用另一个对象，
-    而代理对象可以在目标对象与客户直接起到中介作用。
-</code></pre><h4 id="代理模式的组成部分"><a href="#代理模式的组成部分" class="headerlink" title="代理模式的组成部分"></a>代理模式的组成部分</h4><ul>
+<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><h4 id="代理模式与装饰者模式"><a href="#代理模式与装饰者模式" class="headerlink" title="代理模式与装饰者模式:"></a>代理模式与装饰者模式:</h4><ul>
+<li>相同点:<ol>
+<li>前提条件：装饰者(代理者)与被装饰者(委托者)要继承相同的父类或实现相同的接口。</li>
+<li>都可以增强某个类的方法，对程序进行扩展。</li>
+</ol>
+</li>
+<li>不同点:<ol>
+<li>代理者是为某个对象添加一个代理，以控制对这个对象的访问。而装饰者增强某个类的方法。</li>
+<li>代理可以在调用核心方法之前做前置处理，在调用核心方法之后做后置处理。</li>
+</ol>
+</li>
+</ul>
+<h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><ul>
+<li>定义：<ol>
+<li>为对象提供一种代理，加以控制对象的访问。</li>
+<li>在某些特定的情况下一个对象不适合或者不能直接引用另一个对象,而代理对象可以在目标对象与客户直接起到中介作用。</li>
+</ol>
+</li>
+</ul>
+<h4 id="代理模式的组成部分"><a href="#代理模式的组成部分" class="headerlink" title="代理模式的组成部分"></a>代理模式的组成部分</h4><ul>
 <li><strong>代理接口</strong>：代理类和委托类实现的接口</li>
-<li><strong>代理类</strong>：负责对请求的预处理、过滤，将请求分派给委托类处理以及委托了执行完后的后续处理</li>
-<li><strong>委托类</strong>：真正处理核心逻辑的类<h3 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h3><ul>
-<li><strong>定义</strong>：由程序员创建或工具生成代理类的源码，再编译代理类。所谓静态也就是在程序运行前就已经存在代理类的字节码文件，代理类和委托类的关系在运行前就确定了</li>
-<li><strong>静态代理的缺点</strong></li>
-<li>代理对象的一个接口只服务于一种类型的对象，如果要代理的方法很多，势必要为每一种方法都进行代理，静态代理在程序规模稍大时就无法胜任了。</li>
+<li><strong>代理类</strong><ul>
+<li>负责对请求的预处理、过滤，将请求分派给委托类处理以及委托了执行完后的后续处理</li>
 </ul>
 </li>
+<li><strong>委托类</strong>：真正处理核心逻辑的类</li>
+</ul>
+<h4 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h4><ul>
+<li><strong>定义</strong>：由程序员创建或工具生成代理类的源码，再编译代理类。所谓静态也就是在程序运行前就已经存在代理类的字节码文件，代理类和委托类的关系在运行前就确定了</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>静态代理的缺点</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>代理对象的一个接口只服务于一种类型的对象，如果要代理的方法很多，势必要为每一种方法都进行代理，静态代理在程序规模稍大时就无法胜任了。</li>
 <li>如果接口增加一个方法，除了所有委托类需要实现这个方法外，所有代理类也需要实现此方法。增加了代码维护的复杂度。</li>
 </ul>
-<h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><blockquote>
-<p><strong>定义</strong>：</p>
+<h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><blockquote>
+<p><strong>定义</strong></p>
+</blockquote>
 <ul>
 <li>动态代理它可以直接给某一个目标对象(委托对象)生成一个代理对象，而不需要代理类存在</li>
 <li>动态代理与静态代理模式原理是一样的，只是<strong>动态代理类的源码是在程序运行期间由JVM根据反射等机制动态的生成</strong>，所以不存在代理类的字节码文件。代理者和委托者的关系是在程序运行时确定。</li>
 </ul>
-</blockquote>
-<p>####动态代理常用类详解</p>
-<blockquote>
+<h4 id="动态代理常用类详解"><a href="#动态代理常用类详解" class="headerlink" title="动态代理常用类详解"></a>动态代理常用类详解</h4><blockquote>
 <p><strong>java.lang.reflect.Proxy</strong><br>这是 Java 动态代理机制生成的所有动态代理类的父类，它提供了一组静态方法来为一组接口动态地生成代理对象。</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">newProxyInstance</span><span class="params">(ClassLoader loader, </span></span></span><br><span class="line"><span class="function"><span class="params">                               Class&lt;?&gt;[] interfaces, InvocationHandler h)</span></span></span><br><span class="line"><span class="function">loader:指定类的装载器</span></span><br><span class="line"><span class="function">Interfaces:一组接口,委托类实现的所有接口</span></span><br><span class="line"><span class="function">H:处理器生成代理类实例</span></span><br><span class="line"><span class="function">@return:返回一个代理对象</span></span><br></pre></td></tr></table></figure>
@@ -450,12 +466,12 @@
 </blockquote>
 <blockquote>
 <p><strong>java.lang.ClassLoader</strong></p>
+</blockquote>
 <ul>
-<li>这是类装载器类负责将类的字节码装载到 Java 虚拟机（JVM）中并为其定义类对象，然后该类才能被使用。</li>
+<li>这是类装载器类负责将类的字节码装载到Java虚拟机（JVM）中并为其定义类对象，然后该类才能被使用。</li>
 <li>Proxy 静态方法生成动态代理类同样需要通过类装载器来进行装载才能使用，它与普通类的唯一区别就是其字节码是由 JVM在运行时动态生成的而非预存在于任何一个 .class 文件中。 </li>
 <li>每次生成动态代理类对象时都需要指定一个类装载器对象。</li>
 </ul>
-</blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClassLoader loader = jay.getClass().getClassLoader();</span><br></pre></td></tr></table></figure>
 <h4 id="Dynamic-Proxy-Example"><a href="#Dynamic-Proxy-Example" class="headerlink" title="Dynamic Proxy Example"></a>Dynamic Proxy Example</h4><ul>
 <li><p><strong>明星接口- 代理类和委托类实现的接口</strong></p>
@@ -656,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">2.</span> <span class="nav-text">代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代理模式的组成部分"><span class="nav-number">2.1.</span> <span class="nav-text">代理模式的组成部分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代理"><span class="nav-number">3.</span> <span class="nav-text">静态代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态代理"><span class="nav-number">4.</span> <span class="nav-text">动态代理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Proxy-Example"><span class="nav-number">4.1.</span> <span class="nav-text">Dynamic Proxy Example</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代理模式与装饰者模式"><span class="nav-number">1.1.</span> <span class="nav-text">代理模式与装饰者模式:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">2.</span> <span class="nav-text">代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代理模式的组成部分"><span class="nav-number">2.1.</span> <span class="nav-text">代理模式的组成部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态代理"><span class="nav-number">2.2.</span> <span class="nav-text">静态代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态代理"><span class="nav-number">2.3.</span> <span class="nav-text">动态代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态代理常用类详解"><span class="nav-number">2.4.</span> <span class="nav-text">动态代理常用类详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Proxy-Example"><span class="nav-number">2.5.</span> <span class="nav-text">Dynamic Proxy Example</span></a></li></ol></li></ol></div>
             
 
           </div>
