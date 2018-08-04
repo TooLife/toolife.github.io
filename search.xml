@@ -3,10 +3,19 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2018/08/04/test/"/>
+      <url>/2018/08/04/test/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>个人博客搭建详细解读</title>
       <link href="/2018/08/04/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB/"/>
       <url>/2018/08/04/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB/</url>
-      <content type="html"><![CDATA[<hr><a id="more"></a><blockquote><p>前言</p></blockquote><pre><code>本篇介绍在Mac系统下基于Hexo搭建属于自己的博客！</code></pre><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><blockquote><p>个人觉得Mac的终端命令行工具非常好用，这里我们需要使用终端安装Homebrew、Nodejs</p></blockquote><ul><li><p>安装Homebrew: <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">https://brew.sh/index_zh-cn</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure></li><li><p>通过brew安装Nodejs</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>因为hexo是基于Nodejs所以我们需要安装nodejs</p></blockquote><ul><li>Mac终端自带Git命令，所以无需安装，如没有：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></li></ul><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><blockquote><p>已经做完准备工作，接下来使用npm安装hexo（nodejs中自带npm）</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure><h3 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建一个文件夹</span><br><span class="line">mkdir blog</span><br><span class="line"><span class="meta">#</span> 打开创建的文件夹</span><br><span class="line">cd blog/</span><br><span class="line"><span class="meta">#</span> 以上两步可简写为：mkdir blog &amp; cd blog</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 初始化博客</span><br><span class="line">hexo init</span><br><span class="line"><span class="meta">#</span> 安装依赖包</span><br><span class="line">npm install</span><br><span class="line"><span class="meta">#</span> 等待下载完，上述完成博客已初步完成</span><br></pre></td></tr></table></figure><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 生成静态html文件,可简写为：hexo g</span><br><span class="line">hexo generate</span><br><span class="line"><span class="meta">#</span> 启动服务,可简写为：hexo s</span><br><span class="line">hexo serve</span><br></pre></td></tr></table></figure><ul><li>执行命令之后如下即可通过：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问<br><img src="/images/blog/hexo_s.png" alt=""></li></ul>]]></content>
+      <content type="html"><![CDATA[<hr><a id="more"></a><blockquote><p>前言</p></blockquote><pre><code>本篇介绍在Mac系统下基于Hexo搭建属于自己的博客！</code></pre><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><blockquote><p>个人觉得Mac的终端命令行工具非常好用，这里我们需要使用终端安装Homebrew、Nodejs</p></blockquote><ul><li><p>安装Homebrew: <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">https://brew.sh/index_zh-cn</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure></li><li><p>通过brew安装Nodejs</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>因为hexo是基于Nodejs所以我们需要安装nodejs</p></blockquote><ul><li>Mac终端自带Git命令，所以无需安装，如没有：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></li></ul><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><blockquote><p>已经做完准备工作，接下来使用npm安装hexo（nodejs中自带npm）</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 若上述出现错误使用：</span><br><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure><h3 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建一个文件夹</span><br><span class="line">mkdir blog</span><br><span class="line"><span class="meta">#</span> 打开创建的文件夹</span><br><span class="line">cd blog/</span><br><span class="line"><span class="meta">#</span> 以上两步可简写为：mkdir blog &amp; cd blog</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 初始化博客</span><br><span class="line">hexo init</span><br><span class="line"><span class="meta">#</span> 安装依赖包</span><br><span class="line">npm install</span><br><span class="line"><span class="meta">#</span> 等待下载完，上述完成博客已初步完成</span><br></pre></td></tr></table></figure><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 生成静态html文件,可简写为：hexo g</span><br><span class="line">hexo generate</span><br><span class="line"><span class="meta">#</span> 启动服务,可简写为：hexo s</span><br><span class="line">hexo serve</span><br></pre></td></tr></table></figure><ul><li>执行命令之后如下即可通过：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问<br><img src="/images/blog/hexo_s.png" alt="启动服务"></li></ul><h3 id="撰写博客"><a href="#撰写博客" class="headerlink" title="撰写博客"></a>撰写博客</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 新建一篇博客（文章）</span><br><span class="line">hexo new "我的第一篇博客^_^"</span><br></pre></td></tr></table></figure>]]></content>
       
       <categories>
           
@@ -186,9 +195,9 @@
             
             <tag> iOS </tag>
             
-            <tag> 原生 </tag>
-            
             <tag> Code </tag>
+            
+            <tag> 原生 </tag>
             
         </tags>
       
@@ -315,9 +324,9 @@
             
             <tag> Java </tag>
             
-            <tag> Code </tag>
-            
             <tag> Timer </tag>
+            
+            <tag> Code </tag>
             
         </tags>
       

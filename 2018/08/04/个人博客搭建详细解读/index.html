@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="个人博客">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/blog/hexo_s.png">
-<meta property="og:updated_time" content="2018-08-04T07:06:27.085Z">
+<meta property="og:updated_time" content="2018-08-04T07:14:30.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客搭建详细解读">
 <meta name="twitter:image" content="http://yoursite.com/images/blog/hexo_s.png">
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  277
+                  318
                 </span>
               
 
@@ -438,12 +438,13 @@
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><blockquote>
 <p>已经做完准备工作，接下来使用npm安装hexo（nodejs中自带npm）</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 若上述出现错误使用：</span><br><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
 <h3 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建一个文件夹</span><br><span class="line">mkdir blog</span><br><span class="line"><span class="meta">#</span> 打开创建的文件夹</span><br><span class="line">cd blog/</span><br><span class="line"><span class="meta">#</span> 以上两步可简写为：mkdir blog &amp; cd blog</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 初始化博客</span><br><span class="line">hexo init</span><br><span class="line"><span class="meta">#</span> 安装依赖包</span><br><span class="line">npm install</span><br><span class="line"><span class="meta">#</span> 等待下载完，上述完成博客已初步完成</span><br></pre></td></tr></table></figure>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 生成静态html文件,可简写为：hexo g</span><br><span class="line">hexo generate</span><br><span class="line"><span class="meta">#</span> 启动服务,可简写为：hexo s</span><br><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
 <ul>
-<li>执行命令之后如下即可通过：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问<br><img src="/images/blog/hexo_s.png" alt=""></li>
+<li>执行命令之后如下即可通过：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问<br><img src="/images/blog/hexo_s.png" alt="启动服务"></li>
 </ul>
+<h3 id="撰写博客"><a href="#撰写博客" class="headerlink" title="撰写博客"></a>撰写博客</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 新建一篇博客（文章）</span><br><span class="line">hexo new "我的第一篇博客^_^"</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -485,6 +486,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/04/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -576,7 +581,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -631,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">4.</span> <span class="nav-text">运行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">4.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撰写博客"><span class="nav-number">5.</span> <span class="nav-text">撰写博客</span></a></li></ol></div>
             
 
           </div>
