@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="原创,Git,Shell," />
 
 
 
@@ -86,17 +86,15 @@
 
 
 
-<meta name="description" content="深入原理、学习思想.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="阿里云服务器搭建以及Linux安装软件小结">
-<meta property="og:url" content="http://yoursite.com/阿里云服务器搭建以及Linux安装软件小结/index.html">
+<meta name="keywords" content="原创,Git,Shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git命令详细使用">
+<meta property="og:url" content="http://yoursite.com/2018/08/18/Git命令详细使用/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="深入原理、学习思想.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-18T12:23:38.264Z">
+<meta property="og:updated_time" content="2018-08-18T09:30:58.639Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿里云服务器搭建以及Linux安装软件小结">
-<meta name="twitter:description" content="深入原理、学习思想.">
+<meta name="twitter:title" content="Git命令详细使用">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/阿里云服务器搭建以及Linux安装软件小结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/18/Git命令详细使用/"/>
 
 
 
 
 
-  <title>阿里云服务器搭建以及Linux安装软件小结 | 个人博客</title>
+  <title>Git命令详细使用 | 个人博客</title>
   
 
 
@@ -274,33 +272,276 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/Git命令详细使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Tang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/icon.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">阿里云服务器搭建以及Linux安装软件小结</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Git命令详细使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T16:29:50+08:00">
+                2018-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shell/" itemprop="url" rel="index">
+                    <span itemprop="name">Shell</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  939
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <hr>
+<a id="more"></a>
+<blockquote>
+<p>序言：目前，Git是最流行的版本控制系统。相比于SVN，我更偏爱Git! 本文将详细介绍Git的使用。</p>
+</blockquote>
+<p>###什么是Git?</p>
+<blockquote>
+<p>Git是一种分布式版本控制系统（DVCS），也称为分散式。每个开发人员都拥有存储库的完整副本，该存储库位于云中(远程仓库)。</p>
+</blockquote>
+<p>###安装Git</p>
+<blockquote>
+<p>本人使用的是Mac，终端自带Git工具</p>
+</blockquote>
+<ul>
+<li><p>Mac，通过Homebrew安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装homebrew</span><br><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br><span class="line"><span class="meta">#</span> 安装Git</span><br><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="使用Git"><a href="#使用Git" class="headerlink" title="使用Git"></a>使用Git</h3><h4 id="创建本地存储库"><a href="#创建本地存储库" class="headerlink" title="创建本地存储库"></a>创建本地存储库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>执行完git init后本地仓库已初始化完成。ls -a可以查看到.git的隐藏文件</li>
+</ul>
+<h4 id="更新仓库内容"><a href="#更新仓库内容" class="headerlink" title="更新仓库内容"></a>更新仓库内容</h4><h5 id="创建文件并修改内容"><a href="#创建文件并修改内容" class="headerlink" title="创建文件并修改内容"></a>创建文件并修改内容</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建一个README文件</span><br><span class="line">touch READEM.md</span><br><span class="line"><span class="meta">#</span> 写入一些内容到READEM.md</span><br><span class="line">echo 'hello,world' &gt;&gt; READEM.md</span><br><span class="line"><span class="meta">#</span> 打印READEM.md文件内容</span><br><span class="line">cat READEM.md</span><br></pre></td></tr></table></figure>
+<h5 id="查看仓库状态"><a href="#查看仓库状态" class="headerlink" title="查看仓库状态"></a>查看仓库状态</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line"><span class="meta">#</span> 或者 git status -s</span><br></pre></td></tr></table></figure>
+<h5 id="将变更的文件纳入版本管理"><a href="#将变更的文件纳入版本管理" class="headerlink" title="将变更的文件纳入版本管理"></a>将变更的文件纳入版本管理</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line"><span class="meta">#</span> . 是将所有的文件递归纳入版本管理，若单个添加git add READEM.md 即可</span><br></pre></td></tr></table></figure>
+<h5 id="将纳入版本管理的文件提交到本地仓库"><a href="#将纳入版本管理的文件提交到本地仓库" class="headerlink" title="将纳入版本管理的文件提交到本地仓库"></a>将纳入版本管理的文件提交到本地仓库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m 'first commit'</span><br></pre></td></tr></table></figure>
+<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git log  # 命令是查看全部提交日志  </span><br><span class="line">git log -2  # 查看最近2次的提交日志  </span><br><span class="line">git log -p  # 查看历史纪录以来哪几行被修改  </span><br><span class="line">git log --stat --summary # 查看每个版本变动的档案和行数</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>日志的样式略微难看，这里给大家推荐一个配置</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 给git log起一个别名：git lg</span><br><span class="line">git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 更改之后</span><br><span class="line">git lg  # 命令是查看全部提交日志  </span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><h5 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Git创建分支时，它只是创建一个带有该分支名称的指针，该指针指向已创建分支的commit</p>
+</blockquote>
+<h5 id="切换到dev1分支进行开发"><a href="#切换到dev1分支进行开发" class="headerlink" title="切换到dev1分支进行开发"></a>切换到dev1分支进行开发</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来的所有操作都在dev1分支上，我们仍然来更新仓库的文件内容</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">touch dev1.txt</span><br><span class="line">echo 'this is text file' &gt;&gt; dev1.txt</span><br><span class="line"><span class="meta">#</span> 查看状态</span><br><span class="line">git status -s</span><br><span class="line"><span class="meta">#</span> 纳入版本控制</span><br><span class="line">git add .</span><br><span class="line"><span class="meta">#</span> 提交</span><br><span class="line">git commit -m 'create a dev1 text file'</span><br><span class="line"><span class="meta">#</span> 查看日志</span><br><span class="line">git lg</span><br></pre></td></tr></table></figure>
+<h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><blockquote>
+<p>假设，这条分支的任务已完成，我们切换到主线master上去</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此时，我们再查看日志，并没有刚刚提交的’create a dev1 text file’。原因是：之前所有的操作都在dev1分支上执行，现在切回到master分支自然没有刚刚的日志记录。在实际项目开发中写了不就没有意义了吗？== 所有我们要将dev1分支与master合并！==</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev1</span><br></pre></td></tr></table></figure>
+<h5 id="合并问题"><a href="#合并问题" class="headerlink" title="合并问题"></a>合并问题</h5><blockquote>
+<p>合并之后再次查看日志，你会发现并没有存在dev1分支的存在，与我们相像的并不一致，这是为何？<br>原因：这是因为Git使用快进模式(fast-forward)合并了分支。这里需要注意git给我们打印的输出信息,如上图所示：master和dev1是共同的祖先！<br><strong> 在我们合并分支时，不推荐使用fast-forward模式！可以通过–no-ff命令来处理</strong></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --no-ff dev1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>通过这种方式来合并分支，可以完美的显示分支的生命迹象！</p>
+</blockquote>
+<h5 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h5><blockquote>
+<p>假设分支合并完成，此分支已没有作用，我们应该移除此分支，以后可再次创建命名为dev1分支</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev1</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原创/" rel="tag"><i class="fa fa-tag"></i> 原创</a>
+          
+            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          
+            <a href="/tags/Shell/" rel="tag"><i class="fa fa-tag"></i> Shell</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/04/个人博客搭建详细解读/" rel="next" title="个人博客搭建详细解读">
+                <i class="fa fa-chevron-left"></i> 个人博客搭建详细解读
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+      <div>
+        
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+        
+      </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -335,8 +576,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -400,6 +650,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Git"><span class="nav-number">1.</span> <span class="nav-text">使用Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建本地存储库"><span class="nav-number">1.1.</span> <span class="nav-text">创建本地存储库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新仓库内容"><span class="nav-number">1.2.</span> <span class="nav-text">更新仓库内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建文件并修改内容"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建文件并修改内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看仓库状态"><span class="nav-number">1.2.2.</span> <span class="nav-text">查看仓库状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将变更的文件纳入版本管理"><span class="nav-number">1.2.3.</span> <span class="nav-text">将变更的文件纳入版本管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将纳入版本管理的文件提交到本地仓库"><span class="nav-number">1.2.4.</span> <span class="nav-text">将纳入版本管理的文件提交到本地仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看日志"><span class="nav-number">1.2.5.</span> <span class="nav-text">查看日志</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支"><span class="nav-number">1.3.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分支"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换到dev1分支进行开发"><span class="nav-number">1.3.2.</span> <span class="nav-text">切换到dev1分支进行开发</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并分支"><span class="nav-number">1.4.</span> <span class="nav-text">合并分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#合并问题"><span class="nav-number">1.4.1.</span> <span class="nav-text">合并问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除分支"><span class="nav-number">1.4.2.</span> <span class="nav-text">删除分支</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
