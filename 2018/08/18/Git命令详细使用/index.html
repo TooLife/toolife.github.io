@@ -104,7 +104,13 @@
 <meta property="og:image" content="http://yoursite.com/images/git-study/merge1.png">
 <meta property="og:image" content="http://yoursite.com/images/git-study/merge2.png">
 <meta property="og:image" content="http://yoursite.com/images/git-study/merge3.png">
-<meta property="og:updated_time" content="2018-08-18T11:45:52.631Z">
+<meta property="og:image" content="http://yoursite.com/images/git-study/merge4.png">
+<meta property="og:image" content="http://yoursite.com/images/git-study/status2.png">
+<meta property="og:image" content="http://yoursite.com/images/git-study/readme.png">
+<meta property="og:image" content="http://yoursite.com/images/git-study/status4.png">
+<meta property="og:image" content="http://yoursite.com/images/git-study/merge6.png">
+<meta property="og:image" content="http://yoursite.com/images/git-study/gitee.png">
+<meta property="og:updated_time" content="2018-08-19T02:45:02.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git命令详细使用">
 <meta name="twitter:image" content="http://yoursite.com/images/git-study/init.png">
@@ -385,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  948
+                  1,818
                 </span>
               
 
@@ -401,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  8
                 </span>
               
             </div>
@@ -484,7 +490,7 @@
 <h5 id="合并问题"><a href="#合并问题" class="headerlink" title="合并问题"></a>合并问题</h5><blockquote>
 <p>合并之后再次查看日志，你会发现并没有存在dev1分支的存在，与我们相像的并不一致，这是为何？<br>原因：这是因为Git使用快进模式(fast-forward)合并了分支。这里需要注意git给我们打印的输出信息,如上图所示：master和dev1是共同的祖先！<br><strong> 在我们合并分支时，不推荐使用fast-forward模式！可以通过–no-ff(无快进模式)命令来处理</strong></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --no-ff dev1</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 新建分支dev2重复dev1的操作，再次合并</span><br><span class="line">git merge --no-ff dev2</span><br></pre></td></tr></table></figure>
 <p><img src="/images/git-study/merge2.png" alt="合并分支"><br><img src="/images/git-study/merge3.png" alt="合并分支"></p>
 <blockquote>
 <p>通过这种方式来合并分支，可以完美的显示分支的生命迹象！</p>
@@ -493,7 +499,67 @@
 <p>假设分支合并完成，此分支已没有作用，我们应该移除此分支，以后可再次创建命名为dev1分支</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev1</span><br></pre></td></tr></table></figure>
-<h4 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h4>
+<h4 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h4><blockquote>
+<p>下面模拟一下合并冲突问题！</p>
+</blockquote>
+<ul>
+<li>在master分支上更新仓库并提交<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> master分支更新仓库并提交</span><br><span class="line">echo 'this is a test log' &gt;&gt; README.md</span><br><span class="line">git status -s</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'readme file change content'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> master分支更新仓库并提交</span><br><span class="line">echo 'this is two' &gt;&gt; README.md</span><br><span class="line">git status -s</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'readme file change content two'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 切换到dev2分支，更新仓库并提交</span><br><span class="line">git checkout dev2</span><br><span class="line">echo 'this is dev2 change' &gt;&gt; README.md</span><br><span class="line">git status -s</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'readme file change content dev2 change'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 再次切换到master分支，更新仓库并提交</span><br><span class="line">git checkout master</span><br><span class="line">echo 'this is three' &gt;&gt; README.md</span><br><span class="line">git status -s</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'readme file change content three'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 做完上述工作，接下来合并</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev2</span><br></pre></td></tr></table></figure>
+<p><img src="/images/git-study/merge4.png" alt="合并分支"></p>
+<blockquote>
+<p>很显然，合并失败！此时，两个分支的版本存在冲突，Git已经不知道怎么做了。<strong> 在master更新仓库并提交之后版本已经改变，master已不是上次上传的版本，而dev2分支还是从上一次合并的HEAD开始；所以这时是无法合并的。而Git所做的事情是：指出存在这些内容不兼容的部分。</strong></p>
+</blockquote>
+<ul>
+<li>接着，我们看一下仓库状态：git status</li>
+</ul>
+<p><img src="/images/git-study/status2.png" alt="状态"></p>
+<ul>
+<li><p>进入README文件(vi README.md)查看更新的内容，会发现多出了&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD、========、&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;dev2，这里有两个部分：</p>
+<ul>
+<li>第一部分：在&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD和=======之间，是master分支更新的内容；</li>
+<li>第二部分：在=======和&gt;&gt;&gt;&gt;&gt;&gt;&gt; dev2之间，是dev2分支更新的内容；<br><img src="/images/git-study/readme.png" alt="readme文件"></li>
+</ul>
+</li>
+<li><p><strong>解决办法</strong></p>
+<ul>
+<li>使用HEAD-master版本</li>
+<li>使用dev2版本</li>
+<li>两个版本的组合</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>使用HEAD-master版本<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 将master分支提交的信息保留，去掉dev2分支的内容，并且去掉&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD、========、&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;dev2</span><br><span class="line"><span class="meta">#</span> 保存如下：</span><br><span class="line">this is a test log</span><br><span class="line">this is two</span><br><span class="line">this is three</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> esc退出编辑模式，快捷键shift + :  再输入wq，回车即可，保存并退出</span><br><span class="line"><span class="meta">#</span> 查看状态</span><br><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><strong> 在一开始合并时，查看仓库状态README文件还是Unmerge 状态，在git status -s下是红色的：UU README.md；而现在是AA README.md </strong><br><img src="/images/git-study/status4.png" alt="readme文件"></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m 'save HEAD version, remove dev2 version'</span><br><span class="line"><span class="meta">#</span> 这里虽然使用了HEAD版本，但是保存了dev2分支的生命迹象</span><br><span class="line"><span class="meta">#</span> 合并完成，删除dev2分支</span><br><span class="line">git branch -d dev2</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>使用dev2版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 与第一种解决办法同理</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两个版本的组合</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 两个版本组合就是两者都保留，所以只需要去掉&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD、========、&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;dev2即可</span><br><span class="line"><span class="meta">#</span> esc退出编辑模式，快捷键shift + :  再输入wq，回车即可，保存并退出</span><br><span class="line">git add .</span><br><span class="line">git commit</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>版本合并完之后如下：</p>
+</blockquote>
+<p><img src="/images/git-study/merge6.png" alt="readme文件"></p>
+<h4 id="版本回退-删除"><a href="#版本回退-删除" class="headerlink" title="版本回退(删除)"></a>版本回退(删除)</h4><ul>
+<li>命令<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &lt;版本号&gt;  # 回退到对应的版本号，这里的版本号就是日志前面的7个字符</span><br><span class="line">git reset --hard -HEAD^   # 删除最后一次提交的版本，也就是回退到最后倒数第二次版本</span><br><span class="line">git reset --hard -HEAD~   # 删除最后一次提交的版本，也就是回退到最后倒数第二次版本</span><br><span class="line">git reset --hard -HEAD^^  # 删除最后两次次提交的版本，也就是回退到最后倒数第三次版本</span><br><span class="line">.... 其他的依次类推</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="clone命令"><a href="#clone命令" class="headerlink" title="clone命令"></a>clone命令</h4><blockquote>
+<p>在码云或者Github上要克隆别人的代码，需要用到clone命令</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;仓库地址:url/ssh&gt;  # 如下图所示</span><br></pre></td></tr></table></figure>
+<p><img src="/images/git-study/gitee.png" alt="readme文件"></p>
+
       
     </div>
     
@@ -682,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Git"><span class="nav-number">1.</span> <span class="nav-text">什么是Git?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">2.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Git"><span class="nav-number">3.</span> <span class="nav-text">使用Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建本地存储库"><span class="nav-number">3.1.</span> <span class="nav-text">创建本地存储库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新仓库内容"><span class="nav-number">3.2.</span> <span class="nav-text">更新仓库内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建文件并修改内容"><span class="nav-number">3.2.1.</span> <span class="nav-text">创建文件并修改内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看仓库状态"><span class="nav-number">3.2.2.</span> <span class="nav-text">查看仓库状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将变更的文件纳入版本管理"><span class="nav-number">3.2.3.</span> <span class="nav-text">将变更的文件纳入版本管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将纳入版本管理的文件提交到本地仓库"><span class="nav-number">3.2.4.</span> <span class="nav-text">将纳入版本管理的文件提交到本地仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看日志"><span class="nav-number">3.2.5.</span> <span class="nav-text">查看日志</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支"><span class="nav-number">3.3.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分支"><span class="nav-number">3.3.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换到dev1分支进行开发"><span class="nav-number">3.3.2.</span> <span class="nav-text">切换到dev1分支进行开发</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并分支"><span class="nav-number">3.4.</span> <span class="nav-text">合并分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#合并问题"><span class="nav-number">3.4.1.</span> <span class="nav-text">合并问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除分支"><span class="nav-number">3.4.2.</span> <span class="nav-text">删除分支</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并冲突"><span class="nav-number">3.5.</span> <span class="nav-text">合并冲突</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Git"><span class="nav-number">1.</span> <span class="nav-text">什么是Git?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">2.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Git"><span class="nav-number">3.</span> <span class="nav-text">使用Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建本地存储库"><span class="nav-number">3.1.</span> <span class="nav-text">创建本地存储库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新仓库内容"><span class="nav-number">3.2.</span> <span class="nav-text">更新仓库内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建文件并修改内容"><span class="nav-number">3.2.1.</span> <span class="nav-text">创建文件并修改内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看仓库状态"><span class="nav-number">3.2.2.</span> <span class="nav-text">查看仓库状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将变更的文件纳入版本管理"><span class="nav-number">3.2.3.</span> <span class="nav-text">将变更的文件纳入版本管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将纳入版本管理的文件提交到本地仓库"><span class="nav-number">3.2.4.</span> <span class="nav-text">将纳入版本管理的文件提交到本地仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看日志"><span class="nav-number">3.2.5.</span> <span class="nav-text">查看日志</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支"><span class="nav-number">3.3.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分支"><span class="nav-number">3.3.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换到dev1分支进行开发"><span class="nav-number">3.3.2.</span> <span class="nav-text">切换到dev1分支进行开发</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并分支"><span class="nav-number">3.4.</span> <span class="nav-text">合并分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#合并问题"><span class="nav-number">3.4.1.</span> <span class="nav-text">合并问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除分支"><span class="nav-number">3.4.2.</span> <span class="nav-text">删除分支</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并冲突"><span class="nav-number">3.5.</span> <span class="nav-text">合并冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#合并"><span class="nav-number">3.5.1.</span> <span class="nav-text">合并</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本回退-删除"><span class="nav-number">3.6.</span> <span class="nav-text">版本回退(删除)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clone命令"><span class="nav-number">3.7.</span> <span class="nav-text">clone命令</span></a></li></ol></li></ol></div>
             
 
           </div>
